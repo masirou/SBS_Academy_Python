@@ -3,13 +3,12 @@ Answer = "123"
 Base = input("Num : ")
 Strike = 0
 Out = 0
-Alen = len(Answer)
 
-for i in range(0, Alen):
+for i in range(0, len(Answer)):
     if Answer[i] == Base[i]:
         Strike = Strike+1
     else:
-        for a in range(0, Alen):
+        for a in range(0, len(Answer)):
             if Base[i] == Answer[a]:
                 Out = Out+1
 
