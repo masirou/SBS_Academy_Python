@@ -12,8 +12,11 @@ for i in range(0, len(Answer)):
     if Answer[i] == Base[i]:
         Strike = Strike+1
     else:
-        for a in range(0, len(Answer)):
-            if Base[i] == Answer[a]:
-                Out = Out+1
+        if Base[i] in Answer:
+            Out = Out+1
+    #else:
+    #    for a in range(0, len(Answer)):
+    #        if Base[i] == Answer[a]:
+    #            Out = Out+1
 
 print(f"{Strike} Strike {Out} Out")
