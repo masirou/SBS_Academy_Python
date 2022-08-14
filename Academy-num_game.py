@@ -3,7 +3,7 @@ import random
 Rnum = random.randint(1,100)
 
 while True:
-    Inum =int(input("Number : "))
+    Inum = int(input("Number : "))
     if Inum < Rnum:
         print("Enter Num is Small")
     if Inum > Rnum:
