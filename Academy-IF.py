@@ -37,7 +37,7 @@ if Num3 > Num1:
         print(Num3)
 
 # 차량번호가 짝수로 끝나면 운행가능, 홀수로 끝나면 운행불가, 차량번호는 237가1234와 같은 형식
-CarNum = input("enter the Car Number : ")
+CarNum = input("(ex, 237가1234) enter the Car Number : ")
 if int(CarNum[5:]) % 2 == 0:
     print(f"car's number {CarNum} is available today")
 else:
