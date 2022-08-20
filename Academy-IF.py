@@ -1,15 +1,15 @@
 # 점수를 입력받아 학점을 출력  A = 100 ~ 90 || B = 89 ~ 80 || C = 79 ~ 70 || D = 69 ~ 60 || F = 59 ~ 0
-Score = input("enter the Score : ")
+Score = int(input("enter the Score : "))
 
-if int(Score) >= 90:
+if Score >= 90:
     Credit = "A"
-elif int(Score) >= 80:
+elif Score >= 80:
     Credit = "B"
-elif int(Score) >= 70:
+elif Score >= 70:
     Credit = "C"
-elif int(Score) >= 60:
+elif Score >= 60:
     Credit = "D"
-elif int(Score) >= 0:
+elif Score >= 0:
     Credit = "F"
 print(f"Score is {Score}, Credit is {Credit}")
 
