@@ -11,6 +11,7 @@ Out = 0
 for i in range(0, len(Answer)):
     if Answer[i] == Base[i]:
         Strike = Strike+1
+
     elif Base[i] in Answer:
         Out = Out+1
     # else:
