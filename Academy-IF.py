@@ -26,19 +26,16 @@ else:
 Num1 = int(input(f"[1] enter the Num : "))
 Num2 = int(input(f"[2] enter the Num : "))
 Num3 = int(input(f"[3] enter the Num : "))
-if Num1 > Num2:
-    if Num1 > Num3:
-        print(Num1)
-if Num2 > Num3:
-    if Num2 > Num1:
-        print(Num2)
-if Num3 > Num1:
-    if Num3 > Num2:
-        print(Num3)
+if Num1 > Num2 and Num1 > Num3:
+    print(Num1)
+elif Num2 > Num3 and Num2 > Num1:
+    print(Num2)
+elif Num3 > Num1 and Num3 > Num2:
+    print(Num3)
 
 # 차량번호가 짝수로 끝나면 운행가능, 홀수로 끝나면 운행불가, 차량번호는 237가1234와 같은 형식
 CarNum = input("(ex, 237가1234) enter the Car Number : ")
-if int(CarNum[5:]) % 2 == 0:
-    print(f"car's number {CarNum} is available today")
+if int(CarNum[-1]) % 2 == 0:
+    print(f"car's number '{CarNum}' is available today")
 else:
-    print(f"car's number {CarNum} is Unavailable today")
+    print(f"car's number '{CarNum}' is Unavailable today")
