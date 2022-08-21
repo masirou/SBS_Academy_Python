@@ -1,8 +1,4 @@
 
-
-from calendar import c
-
-
 f = open("file.txt", encoding="UTF-8")
 Mylist = list(f.read().split())
 count = {}
