@@ -1,4 +1,5 @@
 # 차량번호 뒤에 숫자 4자리만 출력
+import operator
 Num = "243가9124"
 print(Num[-4:])
 
@@ -19,14 +20,18 @@ while Second >= 60:
     Second = Second - 60
 print(f"Hour : {Hour}\nMinute : {Minute}\nSeconds : {Second}")
 
-# 가장 많이 나온값과 중복되는 값 찾기
+# 단어 빈도수 랭킹과 중복되는 값 찾기
+
+
 list = ["a", "a", "a", "a", "a", "b", "b", "c", "c", "c", "d"]
-dict = {}
+Tdict = {}
 
 for i in list:
-    dict[i] = list.count(i)
-print(f"가장 많이 나온 값 {max(dict, key=dict.get)}")
 
+    Tdict[i] = list.count(i)
+sdict = sorted(Tdict.items(), key=operator.itemgetter(1), reverse=True)
+for i in range(0, 3):
+    print(f"{i+1}. {sdict[i][0]} \t {sdict[i][1]}")
 
 overlap = []
 for i in list:
