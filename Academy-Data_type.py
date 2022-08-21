@@ -21,18 +21,17 @@ while Second >= 60:
     Second = Second - 60
 print(f"Hour : {Hour}\nMinute : {Minute}\nSeconds : {Second}")
 
-# 단어 빈도수 랭킹과 중복되는 값 찾기
+# file.txt 파일에서 텍스트를 불러와서 단어 빈도수 랭킹, 중복되는 값 찾기
+f = open("file.txt", encoding="UTF-8")
+list = f.read().split()
 
-
-list = ["a", "a", "a", "a", "a", "b", "b", "c", "c", "c", "d"]
 Tdict = {}
-
 for i in list:
-
     Tdict[i] = list.count(i)
 sdict = sorted(Tdict.items(), key=operator.itemgetter(1), reverse=True)
-for i in range(0, 3):
-    print(f"{i+1}. {sdict[i][0]} \t {sdict[i][1]}")
+c = len(sdict)
+for i in range(0, c):
+    print(f"{i+1}. {sdict[i][0]} \t{sdict[i][1]}")
 
 overlap = []
 for i in list:
