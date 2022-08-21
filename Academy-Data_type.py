@@ -31,7 +31,7 @@ for i in list:
 sdict = sorted(Tdict.items(), key=operator.itemgetter(1), reverse=True)
 c = len(sdict)
 for i in range(0, c):
-    print(f"{i+1}. {sdict[i][0]} \t{sdict[i][1]}")
+    print(f"{i+1}.{sdict[i][0]}\t{sdict[i][1]}")
 
 overlap = []
 for i in list:
