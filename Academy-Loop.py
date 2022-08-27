@@ -57,3 +57,35 @@ print(Num)
 
 for i in range(1, 6):
     print(6-i)
+
+# 100점을 받은 학생의 점수를ㅈ ㅔ외한 나머지 학생들의 점수를 5점씩 증가시킨 score 리스트를 생성하고 출력하는 프로그램을 구현하시오 (단, 증가된 점수가 100점을 초과)
+exam = [99, 78, 100, 91, 81, 85, 54, 100, 71, 50]
+score = exam.copy()
+for i in range(0, 10):
+    if score[i] != 100:
+        if score[i] >= 95:
+            score[i] = score[i]+(100-score[i])
+        else:
+            score[i] = score[i]+5
+print(score)
+
+# 3,6,9 게임 99까지 출력
+for i in range(1, 100):
+    if i % 10 == 0:
+        if i % 3 == 0:
+            print("짝", end="\n")
+        else:
+            print(i, end="\n")
+    else:
+        i = str(i)
+        a = int(i[-1])
+        b = int(i[0])
+        if a % 3 == 0:
+            if b % 3 == 0:
+                print("짝짝", end="\t")
+            elif a % 3 == 0:
+                print("짝", end="\t")
+        elif b % 3 == 0:
+            print("짝", end="\t")
+        else:
+            print(i, end="\t")
