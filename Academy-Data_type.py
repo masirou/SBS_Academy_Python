@@ -21,7 +21,7 @@ while Second >= 60:
     Second = Second - 60
 print(f"Hour : {Hour}\nMinute : {Minute}\nSeconds : {Second}")
 
-file.txt 파일에서 텍스트를 불러와서 단어 빈도수 랭킹, 중복되는 값 찾기
+# file.txt 파일에서 텍스트를 불러와서 단어 빈도수 랭킹, 중복되는 값 찾기
 f = open("file.txt", encoding="UTF-8")
 list = f.read().split()
 
