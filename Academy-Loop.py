@@ -39,3 +39,21 @@ for i in range(3, 10):
         for j in range(1, 10):
             if i >= j:
                 print(f"{i} x {j} = {i*j}")
+# 0부터 9 사이의 정수를 입력받고 입력된 정수가 5개가 될때까지 입력받음
+Num = set([])
+while True:
+    a = int(input("enter between number 0 ~ 9 : "))
+    if a < 10:
+        Num.add(a)
+        if len(Num) >= 5:
+            break
+    else:
+        a = input("enter between number 0 ~ 9 : ")
+print("complete")
+sorted(Num)
+print(Num)
+
+# 1뿌터 5 사이에 존재하는 모든 정수를 역순으로 출력
+
+for i in range(1, 6):
+    print(6-i)
