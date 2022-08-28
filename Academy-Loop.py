@@ -24,7 +24,16 @@ for Lnum in range(1, 10):
 
         print(f"{Fnum} x {Lnum} = {Fnum*Lnum}", end=" \t ")
     print()
-
+# 1부터 100까지 와일문으로 출력
+Sum = 0
+while True:
+    Sum += 1
+    if Sum % 10 == 0:
+        print(Sum, end="\n")
+    else:
+        print(Sum, end="\t")
+    if Sum >= 100:
+        break
 # 짝수인 단은 출려하지 말고 각 단까지만 출력
 Int = int(input("enter the num : "))
 sum = 0
