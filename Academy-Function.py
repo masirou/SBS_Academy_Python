@@ -1,4 +1,4 @@
-# 무지개 색 순서대로 출력
+# # 무지개 색 순서대로 출력
 Rainbow = ["red", "Orange", "Yellow", "green", "blue", "navy", "purple"]
 for Index, String in enumerate(Rainbow):
     print(f"[{Index+1}] - {String}")
@@ -12,22 +12,26 @@ while True:
         break
     else:
         Numlist.append(Num)
-print(
-    f"Average : {round(sum(Numlist)/len(Numlist))}, maximum : {max(Numlist)}, minimum : {min(Numlist)}")
-# Sum = 0
-# Index = 0
-# MaxValue = 0
-
-# for i in Numlist:
-#     Sum += i
-#     Index += 1
-
-# for i in Numlist:
-#     if i > MaxValue:
-#         MaxValue = i
-
 # print(
-#     f"Average : {Sum/Index}, maximum : {MaxValue}, minimum : {min(Numlist)}")
+#     f"Average : {round(sum(Numlist)/len(Numlist))}, maximum : {max(Numlist)}, minimum : {min(Numlist)}")
+Sum = 0
+Index = 0
+MaxValue = 0
+MinValue = 0
+for i in Numlist:
+    Sum += i
+    Index += 1
+
+for i in Numlist:
+    if MaxValue == 0 or i > MaxValue:
+        MaxValue = i
+
+for i in Numlist:
+    if MinValue == 0 or i < MinValue:
+        MinValue = i
+
+print(
+    f"Average : {Sum/Index}, maximum : {MaxValue}, minimum : {MinValue}")
 
 # 전화번호 국번만 출력
 
