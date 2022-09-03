@@ -1,5 +1,3 @@
-from cgitb import text
-from multiprocessing.resource_sharer import stop
 import requests
 from bs4 import BeautifulSoup
 
