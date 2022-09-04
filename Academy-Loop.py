@@ -80,25 +80,22 @@ print(score)
 
 # 3,6,9 게임 99까지 출력
 
-
-for i in range(1, 100):
-    ThreeNum = ""
-    numlist = list(str(i))
+for i in range(1, 1000):
+    ThreeNum = 0
+    NumList = list(str(i))
     if i % 10 == 0:
-        for SetNumber in numlist:
-            if int(SetNumber) != 0:
-                if int(SetNumber) % 3 == 0:
-                    ThreeNum = ThreeNum + "짝"
-        if len(ThreeNum) > 0:
-            print(ThreeNum, end="\n")
+        for idx in NumList:
+            if int(idx) != 0 and int(idx) % 3 == 0:
+                ThreeNum += 1
+        if ThreeNum > 0:
+            print("{} : {}".format(i, '짝'*ThreeNum))
         else:
-            print(i, end="\n")
+            print("{} : {}".format(i, i))
     else:
-        for SetNumber in numlist:
-            if int(SetNumber) != 0:
-                if int(SetNumber) % 3 == 0:
-                    ThreeNum = ThreeNum + "짝"
-        if len(ThreeNum) > 0:
-            print(ThreeNum, end="\t")
+        for idx in NumList:
+            if int(idx) != 0 and int(idx) % 3 == 0:
+                ThreeNum += 1
+        if ThreeNum > 0:
+            print("{} : {}".format(i, '짝'*ThreeNum))
         else:
-            print(i, end="\t")
+            print("{} : {}".format(i, i))
