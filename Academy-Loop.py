@@ -79,22 +79,26 @@ for i in range(0, 10):
 print(score)
 
 # 3,6,9 게임 99까지 출력
+
+
 for i in range(1, 100):
+    ThreeNum = ""
+    numlist = list(str(i))
     if i % 10 == 0:
-        if i % 3 == 0:
-            print("짝", end="\n")
+        for a in numlist:
+            if int(a) != 0:
+                if int(a) % 3 == 0:
+                    ThreeNum = ThreeNum + "짝"
+        if len(ThreeNum) > 0:
+            print(ThreeNum, end="\n")
         else:
             print(i, end="\n")
     else:
-        i = str(i)
-        a = int(i[-1])
-        b = int(i[0])
-        if a % 3 == 0:
-            if b % 3 == 0:
-                print("짝짝", end="\t")
-            elif a % 3 == 0:
-                print("짝", end="\t")
-        elif b % 3 == 0:
-            print("짝", end="\t")
+        for a in numlist:
+            if int(a) != 0:
+                if int(a) % 3 == 0:
+                    ThreeNum = ThreeNum + "짝"
+        if len(ThreeNum) > 0:
+            print(ThreeNum, end="\t")
         else:
             print(i, end="\t")
