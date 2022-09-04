@@ -85,18 +85,18 @@ for i in range(1, 100):
     ThreeNum = ""
     numlist = list(str(i))
     if i % 10 == 0:
-        for a in numlist:
-            if int(a) != 0:
-                if int(a) % 3 == 0:
+        for SetNumber in numlist:
+            if int(SetNumber) != 0:
+                if int(SetNumber) % 3 == 0:
                     ThreeNum = ThreeNum + "짝"
         if len(ThreeNum) > 0:
             print(ThreeNum, end="\n")
         else:
             print(i, end="\n")
     else:
-        for a in numlist:
-            if int(a) != 0:
-                if int(a) % 3 == 0:
+        for SetNumber in numlist:
+            if int(SetNumber) != 0:
+                if int(SetNumber) % 3 == 0:
                     ThreeNum = ThreeNum + "짝"
         if len(ThreeNum) > 0:
             print(ThreeNum, end="\t")
